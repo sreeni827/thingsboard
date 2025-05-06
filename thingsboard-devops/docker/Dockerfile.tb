@@ -21,7 +21,7 @@ RUN wget https://github.com/protocolbuffers/protobuf/releases/download/v3.20.1/p
 ENV PATH="/usr/local/bin:$PATH"
 
 # Copy source code into the builder container
-COPY --chown=root:root thingsboard/ /app
+COPY --chown=root:root ./ /app
 
 # Build backend only
 RUN mvn clean install -DskipTests \
